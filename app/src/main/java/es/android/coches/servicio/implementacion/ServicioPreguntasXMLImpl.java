@@ -65,7 +65,6 @@ public class ServicioPreguntasXMLImpl implements es.android.coches.servicio.inte
         for(int i=0; i<paises.getLength(); i++) {
             if(paises.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 Element pais = (Element) paises.item(i);
-                //String nombre = pais.getAttribute("nombre");
                 String nombre = pais.getElementsByTagName("nombre").item(0).getTextContent();
                 String foto = pais.getElementsByTagName("foto").item(0).getTextContent();
                 todasLasPreguntas.add(new Pregunta(nombre, foto));
